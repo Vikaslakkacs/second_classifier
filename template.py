@@ -26,12 +26,12 @@ list_of_filefolders=[
     "init_setup.sh",
     "requirements.txt",
     "requirements_dev.txt",
+    "requirements_dev.yaml",##Installation of tensorflow in mac M1
     "setup.py",
     "setup.cfg",    
     "pyproject.toml",##Python Packaging
     "tox.ini",##Local testing
     "research/stage_01.ipynb"##Jupyter notebook files
-
 
 ]
 
