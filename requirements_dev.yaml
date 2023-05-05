@@ -1,4 +1,4 @@
-name: firstClassifier
+name: secondClassifier
 channels:
   - apple
   - conda-forge
