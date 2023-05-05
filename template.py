@@ -31,7 +31,8 @@ list_of_filefolders=[
     "setup.cfg",    
     "pyproject.toml",##Python Packaging
     "tox.ini",##Local testing
-    "research/stage_01.ipynb"##Jupyter notebook files
+    "research/stage_01.ipynb",##Jupyter notebook files
+    "init_setup_MacM1.sh"
 
 ]
 
