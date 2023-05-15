@@ -1,7 +1,7 @@
-from secondClassifier.entity import DataIngestionConfig
+from secondClassifier.entity import DataIngestionConfig, PrepareBasemodelConfig
 from secondClassifier.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from secondClassifier.utils import create_directory, read_yaml
-
+from pathlib import Path
 
 
 
@@ -34,3 +34,19 @@ class ConfigurationManager:
             clean_dir= config_ingestion.clean_dir
         )
         return data_ingestion_config
+    def get_base_model_config(self)->PrepareBasemodelConfig:
+        basemodel_details= self.config.prepare_base_model
+        ##Create root directory for prepare basemodel
+
+        
+        base_model_config= PrepareBasemodelConfig(
+            root_dir=Path(basemodel_details.root_dir),
+            base_model_path=Path(basemodel_details.base_model_path),
+            updated_model_path=Path(basemodel_details.updated_model_path),
+            include_top=self.params.INCLUDE_TOP,
+            image_size=self.params.IMAGE_SIZE,
+            learning_rate=self.params.LEARNING_RATE,
+            weights=self.params.WEIGHTS,
+            classes=self.params.CLASSES
+        )
+        return base_model_config
