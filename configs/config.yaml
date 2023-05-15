@@ -6,3 +6,9 @@ data_ingestion:
   local_data_file: artifacts/data_ingestion/flower_photos.tgz
   unzip_dir: artifacts/data_ingestion
   clean_dir: artifacts/data_ingestion/flower_photos
+
+
+prepare_base_model:
+  root_dir: artifacts/prepare_base_model
+  base_model_path: artifacts/prepare_base_model/base_model.h5
+  updated_model_path: artifacts/prepare_base_model/updated_model.h5
